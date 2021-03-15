@@ -1,0 +1,17 @@
+.container {
+  width: 100%;
+  padding: 0px 15px;
+  margin: 0px auto;
+
+  @include for-size(mobile) {
+    width: $mobile - 18px;
+  }
+
+  @include for-size(tablet) {
+    width: $tablet - 18px;
+  }
+
+  @include for-size(desktop) {
+    width: $desktop - 18px;
+  }
+}

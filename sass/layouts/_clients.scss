@@ -1,0 +1,52 @@
+.clients-list {
+  @include flexbox;
+  flex-wrap: wrap;
+}
+
+.clients-list__item {
+  @media screen and (max-width: $tablet - 1) {
+    flex-basis: calc((100% - 1 * 30px) / 2);
+    &:nth-child(odd) {
+      margin-right: 30px;
+    }
+    &:nth-last-child(n + 3) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: $desktop - 1) {
+    flex-basis: calc((100% - 2 * 30px) / 3);
+    &:not(:nth-child(3n)) {
+      margin-right: 30px;
+    }
+    &:nth-last-child(n + 4) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @include for-size(desktop) {
+    flex-basis: calc((100% - 5 * 30px) / 6);
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+}
+
+.clients-list__link {
+  @include flexbox(center, center);
+
+  height: 90px;
+  border: 1px solid $icon-color;
+  border-radius: 4px;
+  fill: $icon-color;
+
+  transition: border-color $duration $timing-function,
+    fill $duration $timing-function;
+
+  &:hover,
+  &:focus {
+    border-color: $accent-color;
+    fill: $accent-color;
+  }
+}

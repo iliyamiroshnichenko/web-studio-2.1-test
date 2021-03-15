@@ -1,0 +1,36 @@
+.network-list {
+  @include flexbox(center, center);
+}
+
+.network-list__item {
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.network-list__link {
+  @include flexbox(center, center);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  fill: $icon-color;
+
+  transition: background-color $duration $timing-function,
+    fill $duration $timing-function;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    fill: $main-bg-color;
+  }
+}
+
+.network-list__icon {
+  width: 20px;
+  height: 20px;
+}
+
+.network-list__link--dark {
+  background-color: rgba(255, 255, 255, 0.1);
+  fill: $main-bg-color;
+}

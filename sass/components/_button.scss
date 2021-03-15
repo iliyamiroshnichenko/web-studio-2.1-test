@@ -1,0 +1,31 @@
+.button-primary {
+  display: block;
+  min-width: 200px;
+  padding: 10px 0;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+
+  color: $main-bg-color;
+  background-color: $accent-color;
+  @include font(16px, 1.87, 700);
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  transition: background-color $duration $timing-function;
+
+  &:hover,
+  &:focus {
+    background-color: $button-accent-color;
+  }
+}
+
+.button-primary--flex {
+  @include flexbox(center, center);
+  align-self: flex-end;
+}
+
+.button-primary--centered {
+  margin: 0 auto;
+}

@@ -1,0 +1,23 @@
+.logo {
+  font-family: $logo-font;
+  @include font(24px, 1.17, 700);
+
+  @include for-size(desktop) {
+    @include font(26px, 1.19, 700);
+  }
+}
+.logo--black {
+  color: #000000;
+  letter-spacing: 0.03em;
+  &.none {
+    display: none;
+  }
+}
+
+.logo--accent {
+  color: $accent-color;
+}
+
+.logo--white {
+  color: $main-bg-color;
+}

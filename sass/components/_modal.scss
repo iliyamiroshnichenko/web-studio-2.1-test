@@ -1,0 +1,57 @@
+.modal {
+  width: 100%;
+  padding: 40px;
+  margin: 0 auto;
+  background-color: $main-bg-color;
+  border-radius: 4px;
+
+  transform: scale(1);
+  transition: transform $duration $timing-function;
+
+  @include for-size(mobile) {
+    max-width: 450px;
+  }
+
+  @include for-size(tablet) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  @include for-size(desktop) {
+    max-width: 528px;
+  }
+}
+
+.button-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  @include flexbox(center, center);
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: $main-bg-color;
+  cursor: pointer;
+  fill: #000000;
+  transition: fill $duration $timing-function;
+
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
+}
+
+.modal__text {
+  display: block;
+  margin-bottom: 12px;
+  @include font(20px, 1.5, 700);
+  text-align: center;
+
+  @include for-size(desktop) {
+    line-height: 1.15;
+  }
+}

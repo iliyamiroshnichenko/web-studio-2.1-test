@@ -1,0 +1,25 @@
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @include for-size(desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+.section__title {
+  margin-top: 0;
+  margin-bottom: 30px;
+  text-align: center;
+  @include font(28px, 1.18, 700);
+
+  @include for-size(desktop) {
+    margin-bottom: 50px;
+    @include font(36px, 1.17, 700);
+  }
+}
+
+.section--gray {
+  background-color: $secohd-bg-color;
+  text-align: center;
+}

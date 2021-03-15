@@ -1,0 +1,37 @@
+.examples {
+  @media screen and (max-width:1199px) {
+    display: none;
+  }
+}
+
+.examples-list {
+    @include flexbox;
+}
+
+.examples-list__item {
+  position: relative;
+  flex-basis: calc((100% - 2 * 30px) / 3);
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.examples-list__thumb {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  @include flexbox(center, center);
+  width: 100%;
+  height: 70px;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
+.examples-list__text {
+  margin: 0;
+  @include font(14px, 1.14, 700);
+  text-align: center;
+  text-transform: uppercase;
+
+  color: $main-bg-color;
+}

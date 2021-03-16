@@ -576,6 +576,12 @@ svg {
   font-weight: 500;
 }
 
+@media (max-width: 414px) {
+  .header-networks__link {
+    font-size: 12px;
+  }
+}
+
 .button-menu {
   display: inline-flex;
   padding: 0;
@@ -620,7 +626,6 @@ svg {
     top: 100%;
     left: 0;
     right: 0;
-    padding-left: 40px;
     padding-bottom: 48px;
   }
   .menu-container.is-open {
@@ -637,6 +642,22 @@ svg {
     justify-content: space-between;
     align-items: center;
     text-align: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .burger-container {
+    max-width: 462px;
+    padding-left: 40px;
+    padding-right: 15px;
+    margin: 0px auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .burger-container {
+    display: flex;
+    align-items: center;
   }
 }
 

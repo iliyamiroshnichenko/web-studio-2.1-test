@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Портфолио</title>
+    <title>Portfolio</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
@@ -18,61 +18,65 @@
           <span class="logo--accent">Web</span>Studio
         </a>
         <div class="menu-container" id="menu-container" data-menu>
-          <nav>
-            <ul class="list header-nav">
-              <li class="header-nav__item">
-                <a class="link header-nav__link" href="./index.html">Студия</a>
-              </li>
-              <li class="header-nav__item">
+          <div class="burger-container">
+            <nav>
+              <ul class="list header-nav">
+                <li class="header-nav__item">
+                  <a class="link header-nav__link" href="./index.html"
+                    >Студия</a
+                  >
+                </li>
+                <li class="header-nav__item">
+                  <a
+                    class="link header-nav__link header-nav__link--accent"
+                    href="./portfolio.html"
+                    >Портфолио</a
+                  >
+                </li>
+                <li class="header-nav__item">
+                  <a class="link header-nav__link" href="#">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+            <ul class="list header-contacts">
+              <li class="header-contacts__item">
                 <a
-                  class="link header-nav__link header-nav__link--accent"
-                  href="./portfolio.html"
-                  >Портфолио</a
+                  class="link header-contacts__link header-contacts__link--email"
+                  href="mailto:info@devstudio.com"
+                >
+                  <svg class="header-contacts__icon" width="16" height="12">
+                    <use href="./images/svg/sprite.svg#icon-envelope"></use>
+                  </svg>
+                  info@devstudio.com</a
                 >
               </li>
-              <li class="header-nav__item">
-                <a class="link header-nav__link" href="#">Контакты</a>
+              <li class="header-contacts__item">
+                <a
+                  class="link header-contacts__link header-contacts__link--tel"
+                  href="tel:+380961111111"
+                >
+                  <svg class="header-contacts__icon" width="10" height="16">
+                    <use href="./images/svg/sprite.svg#icon-smartphone"></use>
+                  </svg>
+                  +38 096 111 11 11</a
+                >
               </li>
             </ul>
-          </nav>
-          <ul class="list header-contacts">
-            <li class="header-contacts__item">
-              <a
-                class="link header-contacts__link header-contacts__link--email"
-                href="mailto:info@devstudio.com"
-              >
-                <svg class="header-contacts__icon" width="16" height="12">
-                  <use href="./images/svg/sprite.svg#icon-envelope"></use>
-                </svg>
-                info@devstudio.com</a
-              >
-            </li>
-            <li class="header-contacts__item">
-              <a
-                class="link header-contacts__link header-contacts__link--tel"
-                href="tel:+380961111111"
-              >
-                <svg class="header-contacts__icon" width="10" height="16">
-                  <use href="./images/svg/sprite.svg#icon-smartphone"></use>
-                </svg>
-                +38 096 111 11 11</a
-              >
-            </li>
-          </ul>
-          <ul class="list header-networks">
-            <li class="header-networks__item">
-              <a class="link header-networks__link" href="#">Instagram</a>
-            </li>
-            <li class="header-networks__item">
-              <a class="link header-networks__link" href="#">Twitter</a>
-            </li>
-            <li class="header-networks__item">
-              <a class="link header-networks__link" href="#">Facebook</a>
-            </li>
-            <li class="header-networks__item">
-              <a class="link header-networks__link" href="#">LinkedIn</a>
-            </li>
-          </ul>
+            <ul class="list header-networks">
+              <li class="header-networks__item">
+                <a class="link header-networks__link" href="#">Instagram</a>
+              </li>
+              <li class="header-networks__item">
+                <a class="link header-networks__link" href="#">Twitter</a>
+              </li>
+              <li class="header-networks__item">
+                <a class="link header-networks__link" href="#">Facebook</a>
+              </li>
+              <li class="header-networks__item">
+                <a class="link header-networks__link" href="#">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
         </div>
         <button
           type="button"

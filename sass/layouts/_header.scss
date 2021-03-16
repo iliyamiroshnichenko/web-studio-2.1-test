@@ -176,6 +176,10 @@
 .header-networks__link {
   color: $accent-color;
   @include font(18px, 1.22, 500);
+
+  @media (max-width: 414px) {
+    font-size: 12px;
+  }
 }
 
 .button-menu {
@@ -219,8 +223,6 @@
     top: 100%;
     left: 0;
     right: 0;
-    // width: 100%;
-    padding-left: 40px;
     padding-bottom: 48px;
 
     &.is-open {
@@ -234,5 +236,18 @@
   @include for-size(tablet) {
     @include flexbox(space-between, center);
     text-align: center;
+  }
+}
+
+.burger-container {
+  @media (max-width: $tablet - 1) {
+    max-width: $mobile - 18px;
+    padding-left: 40px;
+    padding-right: 15px;
+    margin: 0px auto;
+  }
+  @include for-size(tablet) {
+    display: flex;
+    align-items: center;
   }
 }

@@ -90,6 +90,10 @@
 }
 
 .header-contacts {
+  @media (max-width: $tablet - 1) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
   @media screen and (min-width: $tablet) and (max-width: $desktop - 1) {
     @include font(12px, 1.17, 500);
     text-align: left;
@@ -102,8 +106,8 @@
 
 .header-contacts__item {
   @media (max-width: $tablet - 1) {
-    &:not(:last-child) {
-      margin-bottom: 16px;
+    &:last-child {
+      margin-bottom: 32px;
     }
   }
 
@@ -129,12 +133,49 @@
   }
 }
 
+.header-contacts__link--tel {
+  @media (max-width: $tablet - 1) {
+    color: $accent-color;
+    @include font(34px, 1.18, 500);
+  }
+}
+
+.header-contacts__link--email {
+  @media (max-width: $tablet - 1) {
+    @include font(24px, 1.17, 500);
+  }
+}
+
 .header-contacts__icon {
   @media (max-width: $tablet - 1) {
     display: none;
   }
   margin-right: 10px;
   fill: currentColor;
+}
+
+.header-networks {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 64px;
+  @include for-size(tablet) {
+    display: none;
+  }
+}
+
+.header-networks__item {
+  &:not(:last-child) {
+    padding-right: 10px;
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+  }
+  &:not(:first-child) {
+    padding-left: 10px;
+  }
+}
+
+.header-networks__link {
+  color: $accent-color;
+  @include font(18px, 1.22, 500);
 }
 
 .button-menu {

@@ -1,9 +1,5 @@
-.feature {
-  padding-top: 60px;
-  padding-bottom: 60px;
-
+.section.feature {
   @include for-size(desktop) {
-    padding-top: 94px;
     padding-bottom: 0;
   }
 }
@@ -13,10 +9,12 @@
     display: flex;
     flex-wrap: wrap;
   }
+  @media screen and (min-width: $tablet) and (max-width: $desktop - 1) {
+    margin: -15px;
+  }
 }
 
 .feature-list__item {
-
   @media screen and (max-width: $tablet - 1) {
     &:not(:last-child) {
       margin-bottom: 30px;
@@ -24,13 +22,8 @@
   }
 
   @media screen and (min-width: $tablet) and (max-width: $desktop - 1) {
-    flex-basis: calc((100% - 1 * 30px) / 2);
-    &:nth-child(odd) {
-      margin-right: 30px;
-    }
-    &:nth-last-child(n + 3) {
-      margin-bottom: 30px;
-    }
+    margin: 15px;
+    flex-basis: calc((100% - 4 * 15px) / 2);
   }
 
   @include for-size(desktop) {

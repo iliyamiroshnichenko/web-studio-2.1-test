@@ -4,12 +4,12 @@
   padding-bottom: 40px;
 
   @include for-size(tablet) {
-     @include flexbox(center);
-     padding-bottom: 30px;
+    @include flexbox(center);
+    padding-bottom: 30px;
   }
 
-   @include for-size(desktop) {
-     padding-bottom: 50px;
+  @include for-size(desktop) {
+    padding-bottom: 50px;
   }
 }
 
@@ -18,16 +18,15 @@
     margin-right: 8px;
   }
 
-   @media screen and (max-width: $tablet - 1) {
-     &:nth-last-child(n + 3) {
+  @media screen and (max-width: $tablet - 1) {
+    &:nth-last-child(n + 3) {
       margin-bottom: 15px;
     }
-   }
+  }
 }
 
 .portfolio-nav__button {
   display: inline-block;
-  // min-width: 73px;
   padding: 6px 22px;
   border: 1px solid transparent;
   border-radius: 4px;
@@ -38,9 +37,7 @@
   @include font(16px, 1.62, 500);
   letter-spacing: 0.03em;
 
-  transition-property: color, background-color, box-shadow;
-  transition-duration: $duration;
-  transition-timing-function: $timing-function;
+  transition: all $duration $timing-function;
 
   &:hover,
   &:focus {

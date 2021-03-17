@@ -1,23 +1,12 @@
 .modal {
   width: 100%;
+  max-width: 450px;
   padding: 40px;
-  margin: 0 auto;
+  margin: 0 15px;
   background-color: $main-bg-color;
   border-radius: 4px;
-
   transform: scale(1);
   transition: transform $duration $timing-function;
-
-  @include for-size(mobile) {
-    max-width: 450px;
-  }
-
-  @include for-size(tablet) {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(1);
-  }
 
   @include for-size(desktop) {
     max-width: 528px;

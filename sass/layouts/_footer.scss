@@ -89,7 +89,6 @@
 .footer-subscribe__input {
   display: block;
   width: 100%;
-  height: 50px;
   margin-top: 20px;
   padding: 15px;
   color: $main-bg-color;
@@ -104,18 +103,17 @@
     color: rgba(255, 255, 255, 0.6);
   }
 
-  @include for-size(mobile) {
+  @include for-size(tablet) {
     width: 450px;
   }
 
   @media screen and (max-width: $desktop - 1) {
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 12px;
   }
 
   @include for-size(desktop) {
-    width: 358px;
+    max-width: 358px;
     margin-right: 12px;
   }
 }
